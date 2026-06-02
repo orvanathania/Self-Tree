@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Self Tree</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      background: linear-gradient(135deg, #d9c2ff, #b388eb);
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+      transition:0.4s;
+    }
+
+    /* DARK MODE */
+    body.dark{
+      background: linear-gradient(135deg, #1f102f, #2d1742);
+      color:white;
+    }
+
+    .container{
+      width:100%;
+      max-width:420px;
+      background:rgba(255,255,255,0.2);
+      backdrop-filter:blur(15px);
+      border:1px solid rgba(255,255,255,0.3);
+      border-radius:25px;
+      padding:30px;
+      text-align:center;
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+      transition:0.4s;
+    }
+
+    body.dark .container{
+      background:rgba(0,0,0,0.25);
+    }
+
+    /* HEADER */
+    header img{
+      width:110px;
+      height:110px;
+      border-radius:50%;
+      object-fit:cover;
+      border:4px solid white;
+      margin-bottom:15px;
+    }
+
+    header h1{
+      font-size:2rem;
+      color:#5c2d91;
+      margin-bottom:5px;
+    }
+
+    body.dark header h1{
+      color:#d7b8ff;
+    }
+
+    header p{
+      font-size:0.95rem;
+      color:#444;
+      margin-bottom:25px;
+    }
+
+    body.dark header p{
+      color:#ddd;
+    }
+
+    /* BUTTON LINKS */
+    .links{
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+    }
+
+    .link-btn{
+      text-decoration:none;
+      color:white;
+      background:#9b5de5;
+      padding:15px;
+      border-radius:15px;
+      font-weight:500;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      transition:0.3s;
+      box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .link-btn:hover{
+      transform:translateY(-4px) scale(1.02);
+      background:#7b2cbf;
+    }
+
+    body.dark .link-btn{
+      background:#5a189a;
+    }
+
+    body.dark .link-btn:hover{
+      background:#7b2cbf;
+    }
+
+    /* DARK MODE BUTTON */
+    .toggle-mode{
+      margin-top:25px;
+      background:white;
+      border:none;
+      padding:12px 18px;
+      border-radius:12px;
+      cursor:pointer;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .toggle-mode:hover{
+      transform:scale(1.05);
+    }
+
+    body.dark .toggle-mode{
+      background:#2d1742;
+      color:white;
+      border:1px solid #ffffff30;
+    }
+
+    footer{
+      margin-top:20px;
+      font-size:0.8rem;
+      opacity:0.8;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width:500px){
+
+      .container{
+        padding:25px 20px;
+      }
+
+      header h1{
+        font-size:1.7rem;
+      }
+
+      .link-btn{
+        padding:13px;
+        font-size:0.95rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <header>
+      <img src="https://i.pinimg.com/736x/67/fe/4f/67fe4fdadf1b77b6f9fd9f8d1dbb8f7d.jpg" alt="Profile">
+
+      <h1>Self Tree</h1>
+
+      <p>
+        Connect all your social media in one beautiful place ✨
+      </p>
+    </header>
+
+    <!-- SECTION -->
+    <section class="links">
+
+      <a href="#" class="link-btn">
+        <i class="fab fa-instagram"></i>
+        Instagram
+      </a>
+
+      <a href="#" class="link-btn">
+        <i class="fab fa-tiktok"></i>
+        TikTok
+      </a>
+
+      <a href="#" class="link-btn">
+        <i class="fab fa-youtube"></i>
+        YouTube
+      </a>
+
+      <a href="#" class="link-btn">
+        <i class="fab fa-facebook"></i>
+        Facebook
+      </a>
+
+      <a href="mailto:emailkamu@gmail.com" class="link-btn">
+        <i class="fas fa-envelope"></i>
+        Email
+      </a>
+
+      <a href="https://wa.me/628123456789" class="link-btn">
+        <i class="fab fa-whatsapp"></i>
+        WhatsApp
+      </a>
+
+    </section>
+
+    <!-- DARK LIGHT MODE BUTTON -->
+    <button class="toggle-mode" onclick="toggleMode()">
+      🌙 Toggle Dark Mode
+    </button>
+
+    <footer>
+      © 2026 Self Tree
+    </footer>
+
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    function toggleMode(){
+      document.body.classList.toggle("dark");
+    }
+
+  </script>
+
+</body>
+</html>
